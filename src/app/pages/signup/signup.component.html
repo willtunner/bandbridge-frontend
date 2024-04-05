@@ -1,0 +1,29 @@
+<app-default-login-layout
+title="Sign in and start today!"
+primaryBtnText="Signup Now"
+secondaryBtnText="Login Now"
+(submit)="submit()"
+(navigate)="navigate()"
+[disablePrimaryBtn]="!signUpForm.valid"
+>
+
+  <form [formGroup]="signUpForm">
+    <app-primary-input inputName="name" type="text" label="Your name" placeHolder="WillTunner" formControlName="name">
+      <img src="/assets/img/email.svg" alt="email">
+    </app-primary-input>
+
+    <app-primary-input inputName="email" type="email" label="Email" placeHolder="greencodebr@gmail.com" formControlName="email">
+      <img src="/assets/img/email.svg" alt="email">
+    </app-primary-input>
+
+    <app-primary-input inputName="password" type="password" label="Your password" formControlName="password">
+      <img src="/assets/img/pass.svg" alt="email">
+    </app-primary-input>
+
+    <app-primary-input inputName="confirmPassword" type="password" label="Confirm your password" formControlName="confirmPassword">
+      <img src="/assets/img/pass.svg" alt="email">
+    </app-primary-input>
+
+  </form>
+</app-default-login-layout>
+<!--  -->
