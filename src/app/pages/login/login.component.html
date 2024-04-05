@@ -1,1 +1,17 @@
-<app-default-login-layout></app-default-login-layout>
+<app-default-login-layout
+title="Login into your account"
+primaryBtnText="Loging Now"
+secondaryBtnText="Signup Now"
+>
+  <form [formGroup]="loginForm">
+    <app-primary-input inputName="email" type="email" label="Email" placeHolder="greencodebr@gmail.com" formControlName="email">
+      <img src="/assets/img/email.svg" alt="email">
+    </app-primary-input>
+
+    <app-primary-input inputName="password" type="password" label="Your password" formControlName="password">
+      <img src="/assets/img/pass.svg" alt="email">
+    </app-primary-input>
+
+    <span>forgot password?</span>
+  </form>
+</app-default-login-layout>
