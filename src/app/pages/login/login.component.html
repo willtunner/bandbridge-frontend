@@ -2,7 +2,11 @@
 title="Login into your account"
 primaryBtnText="Loging Now"
 secondaryBtnText="Signup Now"
+(submit)="submit()"
+(navigate)="navigate()"
+[disablePrimaryBtn]="!loginForm.valid"
 >
+
   <form [formGroup]="loginForm">
     <app-primary-input inputName="email" type="email" label="Email" placeHolder="greencodebr@gmail.com" formControlName="email">
       <img src="/assets/img/email.svg" alt="email">
